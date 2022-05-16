@@ -1,0 +1,61 @@
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  overflow: auto;
+}
+#progress-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(1px);
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 1201;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http:www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Ccircle cx='50' cy='50' fill='none' stroke='%23bdbdbd' stroke-width='7' r='28' stroke-dasharray='113.09733552923255 39.69911184307752'%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1s' values='0 50 50;360 50 50' keyTimes='0;1'%3E%3C/animateTransform%3E%3C/circle%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 45%;
+  background-size: 56px 56px;
+}
+#progress-backdrop::after {
+  content: "Loading";
+  font-size: 15px;
+  font-weight: 500;
+  color: #bdbdbd;
+}
