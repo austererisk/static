@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
   height: 100vh;
   overflow: auto;
 }
-#progress-backdrop {
+.progress-backdrop {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
   background-position: 50% 45%;
   background-size: 56px 56px;
 }
-#progress-backdrop::after {
+.progress-backdrop::after {
   content: "Loading";
   font-size: 15px;
   font-weight: 500;
